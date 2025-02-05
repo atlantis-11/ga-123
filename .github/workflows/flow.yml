@@ -7,9 +7,4 @@ jobs:
   flow-j1:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 10 && echo hello-j1
-
-  flow-j2:
-    runs-on: ubuntu-latest
-    steps:
-      - run: sleep 5 && echo hello-j2
+      - run: echo ${{ secrets.MY_SECRET }}

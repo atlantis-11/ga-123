@@ -6,5 +6,3 @@ jobs:
   j1:
     uses: ./.github/workflows/flow.yml
   
-  j2:
-    uses: ./.github/workflows/flow.yml
