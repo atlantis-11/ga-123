@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: j1
     steps:
-     - run: echo ${{ needs.j1.outputs.out_version }}
+      - run: echo ${{ needs.j1.outputs.out_version }}
