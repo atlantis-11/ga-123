@@ -4,17 +4,7 @@ on: [push]
 
 jobs:
   j1:
-    strategy:
-      matrix:
-        version: [10, 12, 14]
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{ matrix.version }}
-    outputs:
-      out_version: ${{ matrix.version }}
-
+    uses: ./flow.yml@main
+  
   j2:
-    runs-on: ubuntu-latest
-    needs: j1
-    steps:
-      - run: echo ${{ needs.j1.outputs.out_version }}
+    uses: ./flow.yml@main
