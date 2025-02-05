@@ -4,5 +4,6 @@ on: [push]
 
 jobs:
   j1:
-    uses: ./.github/workflows/flow.yml
-    secrets: inherit
+    runs-on: vm
+    steps:
+      - run: touch 1.txt
